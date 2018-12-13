@@ -1,0 +1,171 @@
+Practical Activities: Beyond Basic Programming - Intermediate Python 
+(recluze.net/learn) 
+
+
+Practical Activity: Logging 
+-------------
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Open up any past project that you have worked with (even a small one would work). Insert logging commands in it in different locations. If there are multiple files, that is even better (but in this case, remember that you will have to import the logging module in each file separately). Make sure you insert logging commands for different levels including DEBUG, INFO, WARN and ERROR. 
+
+Then, run the project at different logging levels. Finally, redirect the logs to a file and run your code again. 
+
+
+Practical Activity: Testing  
+-------------
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Open up any past project that you might have worked with. Identify at least 5 critical functions that have clearly defined inputs and outputs. 
+
+For each of these functions, write 2 tests that check the outputs for some inputs. 
+
+Finally, run py.test on your project and ensure that all tests are passing. You can then go ahead and create multiple tests for different conditions that you think these functions might need to handle. 
+
+Practical Activity: List Mutability
+---------------------
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Create three dictionaries. Insert three items in each of these dictionaries. 
+
+Then, create a new list -- call it l1 --  which contains all three of the above dictonaries as its elements. 
+
+Create a copy of this list using l2 = l1[:]. Now change some value in one of the dictionaries. Do you think the values will change in l2 as well? 
+
+Take a look at l2 to verify your reasoning. If l2 does change, use deepcopy to create yet another copy -- call it l3 -- so that changing the original dictionaries does not affect l3. 
+
+
+Practical Activity: Generators 
+----------------
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Create a generator that generates a tuple of two random numbers and returns them 
+
+Create another generator that calls the first generator and returns each of the generated elements one at a time! (Hint: You may need two yield statements here.)
+
+Use this second generator in main code. 
+
+
+Practical Activity: Decorators  
+----------------
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Create a global variable is_logged_in and set it to False. 
+
+Create a decorator by the name of login_required. This decorator should modify the function it wraps to simply return False if the global value is_logged_in is set to False. Otherwise, it should call the function as normal. 
+
+Create a new function generate_view and decorate it with the login_required generator. This function should simply return a string "Hello!".
+
+Call the generate_view function to see if you get False or the string "Hello!". 
+
+Change global variable is_logged_in to True and call generate_view again. Check the result. 
+
+
+Practical Activity: Context Managers
+----------------------
+
+For this activity, the task is simple. Create the context manager for creating temporary files. The logic for this was described in the previous video. 
+
+Note that while we have the code for this in the notebook, you should try to do this yourself before looking at that code. 
+
+
+Practical Activity: Multithreading  
+--------------------
+a - multhreading 
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+You need to simulate a simple ATM machie for withdrawl of cash. Here's the process. 
+
+- Create a global variable called balance. Set its initial value to 10,000. This is the customer's starting balance.  
+
+- Create a function that simulates withdrawl of $10. For this purpose, the function must first retrieve the value of the global variable balance. Then, it must check if the balance is more than or equal to 10. If the balance isn't sufficient, the function should simply return. If it is sufficient, the function sleeps for a second to simulate the ATM machine counting cash. 
+
+After that, the function must subtract 10 from the global variable balance. 
+
+- In the main code, create 1,010 threads -- each running the withdrawl function we wrote above. Make sure you start all threads first. After all threds have been started, join them so that we wait until they are done processing. 
+
+- Print the final balance and see if the balance is equal to 0 or if it has gone in the negative. (Don't worry if the balance goes in the negative as we will fix this later.) 
+
+
+
+b - locks 
+---------
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Continue from the previous practice activity. Create a global Lock variable. Acquire and release lock at suitable position in the withdrawl function to ensure that the balance never goes in the negative. 
+
+c - asyncio 
+-----------
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Continue from the previous practice activity. Change your code to use asyn functions instead of threads. Create an even loop just as we did in the video -- you will just need to change the function body itself. 
+
+When you are doing async functions, you cannot use time.sleep(1). Instead, you should use:  await asyncio.sleep(1)
+
+Practical Activity: Functional Programming 
+---------
+
+This is more of a non-practical activity but it's still very useful. 
+
+- Read up more on functional programming. 
+
+- If you are interested in Javascript, take a look at functional programming in Javascript and how it relates to promises and asyncio. 
+
+Practical Activity: Plotting  
+-------------- 
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+Go to the matplotlib examples page here: 
+
+Try running code for different types of plots. Make sure you understand the different options. 
+
+
+Practical Activity: Regular Expressions 
+------------ 
+
+This is a simple practice activity to help you learn the concepts better. We're going to keep these activities brief so that you can do them quickly. Remember to post in the Q&A forums if you have any problem at all. I'm here to help. 
+
+Here's your task: 
+
+You are given the following URL: 
+
+https://example.org/some-url.html?first=true
+
+1. You need to write a regular expression that matches this URL. Some variations that can be expected in this URL are: 
+
+- Domain name might change. So, we can have dummy.com instead of example.org 
+
+- Web page URI might change. So, it can be something.html instead of some-url.html 
+
+- Value of first can change from true to false 
+
+
+2. Change your regexp to allow you to extract all three of these: domain, webpage URI and the value of the variable first. So, in the example above, you should extract: example.org, some-url.html and true. 
+
+
+
